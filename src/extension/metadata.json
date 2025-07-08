@@ -1,0 +1,9 @@
+{
+  "uuid": "gnome-ai-assistant@example.com",
+  "name": "AI Assistant",
+  "description": "AI-powered personal assistant for GNOME desktop",
+  "shell-version": ["45", "46", "47", "48"],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.ai-assistant",
+  "url": "https://github.com/example/gnome-ai-assistant"
+}

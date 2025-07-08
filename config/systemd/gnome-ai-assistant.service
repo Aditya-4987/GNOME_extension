@@ -1,0 +1,20 @@
+[Unit]
+Description=GNOME AI Assistant Service
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/gnome-ai-assistant/venv/bin/python -m gnome_ai_assistant.main
+Restart=always
+RestartSec=3
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=%t
+Environment=PATH=%h/.local/share/gnome-ai-assistant/venv/bin:/usr/bin:/bin
+Environment=GNOME_AI_LOG_LEVEL=INFO
+WorkingDirectory=%h/.local/share/gnome-ai-assistant
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,42 @@
+{
+  "llm": {
+    "provider": "ollama",
+    "model": "llama2",
+    "base_url": "http://localhost:11434",
+    "max_tokens": 2048,
+    "temperature": 0.7,
+    "timeout": 30
+  },
+  "service": {
+    "socket_path": "/tmp/gnome-ai-assistant.sock",
+    "host": "localhost",
+    "port": 8000,
+    "log_level": "INFO"
+  },
+  "security": {
+    "require_permissions": true,
+    "default_permission_level": "deny",
+    "session_timeout": 3600,
+    "audit_log": true,
+    "max_concurrent_requests": 10
+  },
+  "database": {
+    "sqlite_path": "",
+    "chromadb_path": "",
+    "connection_pool_size": 10,
+    "max_overflow": 20,
+    "pool_timeout": 30
+  },
+  "voice": {
+    "enabled": false,
+    "recognition_engine": "speech_recognition",
+    "tts_engine": "piper",
+    "wake_word": "hey assistant",
+    "language": "en-US"
+  },
+  "notifications": {
+    "enabled": true,
+    "timeout": 5000,
+    "priority": "normal"
+  }
+}

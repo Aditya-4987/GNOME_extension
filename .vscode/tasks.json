@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Dependencies",
+			"type": "shell",
+			"command": "pip install -r requirements.txt",
+			"group": "build",
+			"isBackground": false
+		},
+		{
+			"label": "Run AI Assistant Service",
+			"type": "shell",
+			"command": "python -m gnome_ai_assistant.main",
+			"group": "build",
+			"isBackground": true,
+			"options": {
+				"cwd": "${workspaceFolder}/src"
+			}
+		},
+		{
+			"label": "Run Tests",
+			"type": "shell",
+			"command": "python -m pytest tests/ -v",
+			"group": "test",
+			"isBackground": false
+		},
+		{
+			"label": "Install Extension",
+			"type": "shell",
+			"command": "chmod +x scripts/install.sh && ./scripts/install.sh",
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}

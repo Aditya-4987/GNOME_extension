@@ -1,0 +1,159 @@
+{
+  "tools": {
+    "file_manager": {
+      "enabled": true,
+      "allowed_directories": [
+        "~/Documents",
+        "~/Downloads",
+        "~/Pictures",
+        "~/Videos",
+        "~/Music",
+        "~/Desktop"
+      ],
+      "forbidden_directories": [
+        "/etc",
+        "/usr",
+        "/var",
+        "/sys",
+        "/proc",
+        "/dev",
+        "/boot"
+      ],
+      "max_file_size": 104857600,
+      "allowed_extensions": [
+        "txt", "md", "pdf", "doc", "docx", "odt",
+        "jpg", "jpeg", "png", "gif", "bmp", "svg",
+        "mp3", "wav", "flac", "ogg",
+        "mp4", "avi", "mkv", "mov",
+        "zip", "tar", "gz", "bz2", "xz"
+      ]
+    },
+    "window_manager": {
+      "enabled": true,
+      "allowed_applications": [],
+      "forbidden_applications": [
+        "gnome-keyring",
+        "gnome-shell",
+        "systemd"
+      ]
+    },
+    "spotify": {
+      "enabled": true,
+      "dbus_timeout": 5,
+      "retry_attempts": 3
+    },
+    "spotify_enhanced": {
+      "enabled": true,
+      "dbus_timeout": 5,
+      "retry_attempts": 3,
+      "playlist_management": true,
+      "queue_management": true
+    },
+    "system_control": {
+      "enabled": true,
+      "allowed_commands": [
+        "poweroff",
+        "reboot",
+        "suspend",
+        "hibernate",
+        "lock"
+      ],
+      "require_confirmation": true,
+      "confirmation_timeout": 30
+    },
+    "package_manager": {
+      "enabled": true,
+      "allowed_operations": [
+        "install",
+        "remove",
+        "update",
+        "search"
+      ],
+      "auto_update": false,
+      "confirm_before_install": true,
+      "max_concurrent_operations": 1
+    },
+    "package_manager_enhanced": {
+      "enabled": true,
+      "allowed_operations": [
+        "install",
+        "remove",
+        "update",
+        "search",
+        "upgrade"
+      ],
+      "aur_enabled": true,
+      "auto_update": false,
+      "confirm_before_install": true,
+      "max_concurrent_operations": 1
+    },
+    "web_browser": {
+      "enabled": true,
+      "default_browser": "default",
+      "allowed_browsers": [
+        "firefox",
+        "chrome",
+        "chromium",
+        "default"
+      ],
+      "block_dangerous_urls": true,
+      "url_whitelist": [],
+      "url_blacklist": []
+    },
+    "network": {
+      "enabled": true,
+      "max_ping_count": 10,
+      "max_traceroute_hops": 30,
+      "speed_test_timeout": 60,
+      "allowed_interfaces": [],
+      "wifi_management": true
+    }
+  },
+  "security": {
+    "tool_permissions": {
+      "file_manager": ["file_access"],
+      "window_manager": ["window_control", "desktop_control"],
+      "spotify": ["media_control"],
+      "spotify_enhanced": ["media_control", "playlist_management"],
+      "system_control": ["system_control", "power_management"],
+      "package_manager": ["package_management"],
+      "package_manager_enhanced": ["package_management", "aur_access"],
+      "web_browser": ["browser_control", "url_access"],
+      "network": ["network_access", "system_info"]
+    },
+    "risk_levels": {
+      "file_manager": "medium",
+      "window_manager": "medium",
+      "spotify": "low",
+      "spotify_enhanced": "low",
+      "system_control": "high",
+      "package_manager": "high",
+      "package_manager_enhanced": "high",
+      "web_browser": "medium",
+      "network": "medium"
+    }
+  },
+  "categories": {
+    "file": ["file_manager"],
+    "system": ["window_manager", "system_control", "package_manager", "package_manager_enhanced", "network"],
+    "media": ["spotify", "spotify_enhanced"],
+    "web": ["web_browser"],
+    "network": ["network"]
+  },
+  "aliases": {
+    "file": "file_manager",
+    "files": "file_manager",
+    "window": "window_manager",
+    "windows": "window_manager",
+    "music": "spotify",
+    "spotify": "spotify_enhanced",
+    "power": "system_control",
+    "system": "system_control",
+    "package": "package_manager_enhanced",
+    "packages": "package_manager_enhanced",
+    "browser": "web_browser",
+    "web": "web_browser",
+    "network": "network",
+    "net": "network"
+  }
+}

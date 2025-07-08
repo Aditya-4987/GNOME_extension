@@ -1,0 +1,70 @@
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+sqlalchemy>=2.0.23
+aiosqlite>=0.19.0
+chromadb>=0.4.18
+numpy>=1.24.3
+openai>=1.3.0
+anthropic>=0.7.8
+ollama>=0.1.7
+speechrecognition>=3.10.0
+piper-tts>=1.2.0
+pyaudio>=0.2.11
+Pillow>=10.1.0
+pytesseract>=0.3.10
+pyatspi>=2.0.1
+python-dbus>=1.3.2
+gi>=1.2
+websockets>=12.0
+aiofiles>=23.2.1
+httpx>=0.25.2
+aiohttp>=3.9.0
+structlog>=23.2.0
+cryptography>=41.0.7
+psutil>=5.9.6
+# Network tools
+netifaces>=0.11.0
+ping3>=4.0.4
+
+# Additional system tools
+distro>=1.8.0
+packaging>=23.2
+
+# Enhanced development tools
+pytest-asyncio>=0.21.1
+pytest-mock>=3.12.0
+pytest-cov>=4.1.0
+
+# Additional media/audio support
+mutagen>=1.47.0
+python-vlc>=3.0.18121
+
+# Security enhancements
+bcrypt>=4.1.2
+passlib>=1.7.4
+
+# Configuration management
+toml>=0.10.2
+pyyaml>=6.0.1
+
+# Enhanced logging
+loguru>=0.7.2
+
+# System monitoring
+py-cpuinfo>=9.0.0
+GPUtil>=1.4.0
+
+# Enhanced web support
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+
+# Additional async support
+asyncpg>=0.29.0
+aioredis>=2.0.1
+
+# Development and testing
+black>=23.11.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.7.1
