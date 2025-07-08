@@ -74,6 +74,16 @@ systemctl --user start gnome-ai-assistant
 gnome-extensions enable gnome-ai-assistant@example.com
 ```
 
+## Uninstallation
+
+To completely remove GNOME AI Assistant from your system, see the detailed [Uninstall Guide](UNINSTALL.md).
+
+Quick uninstall:
+```bash
+chmod +x scripts/uninstall.sh
+./scripts/uninstall.sh
+```
+
 ## Architecture
 
 ### Core Components
